@@ -95,7 +95,7 @@ def main():
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     flags = {a for a in sys.argv[1:] if a.startswith("--")}
 
-    pth_path = args[0] if len(args) >= 1 else "my_model_weights.pth"
+    pth_path = args[0] if len(args) >= 1 else "teacher_best_state_dict.pth"
     out_path = args[1] if len(args) >= 2 else "weights.hlsl"
     use_raw = "--raw" in flags   # по умолчанию берём EMA
 
